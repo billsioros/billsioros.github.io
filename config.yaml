@@ -1,0 +1,422 @@
+baseURL: "https://billsioros.github.io"
+languageCode: "en-us"
+title: "Vassilis Sioros | Software / Machine Learning Engineer"
+theme: hugo-profile
+
+outputs:
+  home:
+    - "HTML"
+    - "RSS"
+    - "JSON"
+  page:
+    - "HTML"
+    - "RSS"
+
+Paginate: 3
+enableRobotsTXT: true
+# disqusShortname: your-disqus-shortname
+# googleAnalytics: G-MEASUREMENT_ID
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /posts
+      weight: 1
+    # - identifier: gallery
+    #   name: Gallery
+    #   title: Blog posts
+    #   url: /gallery
+    #   weight: 2
+    #Dropdown menu
+    # - identifier: dropdown
+    #   title: Example dropdown menu
+    #   name: Dropdown
+    #   weight: 3
+    # - identifier: dropdown1
+    #   title: example dropdown 1
+    #   name: example 1
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 1
+    # - identifier: dropdown2
+    #   title: example dropdown 2
+    #   name: example 2
+    #   url: /#
+    #   parent: dropdown
+    #   weight: 2
+
+params:
+  title: "Vassilis Sioros"
+  description: Software / Machine Learning Engineer - AI / ML MSc Candidate
+  # staticPath: ""  # The path to serve the static files from
+  favicon: "/fav.png"
+
+  # Whether to serve bootstrap css and js files from CDN or not. Can be set to true, "css" or "js" to choose between
+  # serving both, only the css, or only the js files through the CDN. Any other value will make so that CDN is not used.
+  # Note the lack of "" in true, it should be of boolean type.
+  useBootstrapCDN: false
+
+  # If you want to load dynamically responsive images from Cloudinary
+  # This requires your images to be uploaded + hosted on Cloudinary
+  # Uncomment and change YOUR_CLOUD_NAME to the Cloud Name in your Cloudinary console
+  # cloudinary_cloud_name: "YOUR_CLOUD_NAME"
+
+  # Whether to add mathjax support on all pages. Alternatively, you can opt-in per page by adding `mathjax: true` in the frontmatter.
+  mathjax: false
+
+  # Whether the fade animations on the home page will be enabled
+  animate: true
+
+  theme:
+    # disableThemeToggle: true
+    # defaultTheme: "dark" # dark
+
+  font:
+    fontSize: 1rem # default: 1rem
+    fontWeight: 400 # default: 400
+    lineHeight: 1.5 # default: 1.5
+    textAlign: left # default: left
+
+  # color preference
+  color:
+  #   textColor:
+  #   secondaryTextColor:
+  #   backgroundColor:
+  #   secondaryBackgroundColor:
+  #   primaryColor:
+  #   secondaryColor:
+
+    darkmode:
+  #     textColor:
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+      primaryColor: "#007bff"
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  navbar:
+    align: ms-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+    # brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+    # showBrandLogo: false # Show brand logo in nav bar | default is true
+    brandName: "Vassilis Sioros" # Brand name for the brand | default is the title variable
+    disableSearch: true
+    # searchPlaceholder: "Search"
+    stickyNavBar:
+      enable : true
+      showOnScrollUp : false
+    menus:
+      disableAbout: false
+      disableExperience: false
+      disableEducation: false
+      disableProjects: false
+      disableAchievements: false
+      disableContact: false
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Vassilis Sioros."
+    subtitle: "Software / Machine Learning Engineer"
+    content: "I'm currently pursuing a MSc. degree in [Data Science and Machine Learning](https://dsml.ece.ntua.gr/) at [National Technical University of Athens](https://www.ntua.gr/en). I’m extremely interested in Natural Language Processing and Text-to-Image Generation. I am currently working on various projects at [Group4Life](https://www.group4life.com) and I have previously worked as a Software Engineer at [Kaizen Gaming](https://kaizengaming.com) based in Athens, Greece."
+    # image: /images/hero.svg
+    bottomImage:
+      enable: false
+    # roundImage: true # Make hero image circular | default false
+    button:
+      enable: false
+      name: "Resume"
+      url: "#"
+      download: true
+      newPage: false
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-github
+          url: https://github.com/billsioros
+        - icon: fab fa-linkedin-in
+          url: https://www.linkedin.com/in/vassilis-sioros
+        - icon: fas fa-envelope
+          url: mailto:billsioros97@gmail.com
+        - icon: fab fa-spotify
+          url: https://open.spotify.com/user/21odjurdoeeewkibivqu6d6wi
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: "/images/me.jpg"
+    content: |-
+      I'm a passionate Full Stack Developer, and I find my true calling in crafting seamless Back-end solutions that not only I can navigate effortlessly but also others can enjoy using intuitively.
+
+      I revel in the world of Python and its powerful ML frameworks, and I am committed to pushing the boundaries of what's possible in the realm of Machine and Deep Learning.
+
+      Recently, I embarked on a new chapter in my career, serving as a CTO and managing people for the first time in my life. It's an exciting opportunity to lead a team and drive innovation. Simultaneously, I'm diving into the realm of deep learning research, focusing on text-to-image and text-to-audio generation. I'm determined to contribute to cutting-edge technologies that enhance the way we interact with both visual and auditory information.
+    skills:
+      enable: true
+      title: "Here are a few technologies I've been working with recently:"
+      items:
+        - "FastAPI"
+        - "React"
+        - "Docker"
+        - "Kubernetes"
+        - "PyTorch"
+        - "HuggingFace"
+
+  # Experience
+  experience:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - job: "Chief Technology Officer"
+        company: "Group4Life"
+        companyUrl: "https://www.group4life.com"
+        date: "October 2022 - Present"
+        featuredLink:
+          enable: true
+          name: "Check us out on LinkedIn!"
+          url: "https://www.linkedin.com/company/group4life"
+        content: |
+          - Driving technological innovation and overseeing the development and implementation of advanced solutions.
+          - Leading and overseeing a dynamic team comprising both technical and non-technical professionals.
+          - Utilizing FastAPI for backend development, ensuring the creation of efficient and scalable API services.
+          - Employing React with Material-UI (MUI), React Query, and Vite for frontend development, elevating user experience and responsiveness.
+          - Orchestrating a microservices architecture, encompassing a TCP middleware for parsing device payloads and a notification microservice using SocketIO.
+          - Managing infrastructure on Kubernetes, optimizing deployment, scaling, and maintenance.
+          - Implementing CI/CD pipelines through GitHub Actions, automating the entire software development lifecycle.
+          - Containerizing applications with Docker, ensuring consistency and portability.
+          - Implementing monitoring solutions with Graylog, Grafana, Prometheus, and Portainer, enhancing system observability and performance analysis.
+          - Establishing RabbitMQ and Redis for intraservice communication, facilitating efficient data exchange between microservices.
+      - job: "Software Engineer"
+        company: "Kaizen Gaming"
+        companyUrl: "https://kaizengaming.com"
+        date: "May 2021 - Sep 2022"
+        content: |
+          - Developing and delivering core functionality features of our sportsbook platform.
+          - Leading the development of a stress testing framework based on the NBomber framework to gather performance metrics for our distributed actor-model-based system using Grafana and Prometheus.
+          - Being an active member of an Agile team, responsible for making product, software, and system design decisions.
+      - job: "Software Engineer"
+        company: "Mellon Technologies"
+        companyUrl: "https://mellongroup.com/companies/mellon-technologies"
+        date: "Dec 2019 - May 2021"
+        content: |
+          Software Engineer:
+            - Assisted in the design of the Public Key Infrastructure of various clients, based on nShield Connect HSMs and Microsoft PKI Services.
+            - Lead Developer on the Mellon Remote Key Injection project, which is a Django-based web application responsible for the remote injection of cryptographic keys into POS devices.
+            - Assisted in the development of the Mellon Receipts system. mReceipts is a Django-based transnational switch, integrating HSM-based security.
+            - Part of the e-PIN Development Team, a .NET Framework MVC application, aiming at setting, retrieving, clearing, and verifying the banking pin of a customer in a safe cryptographic environment.
+            - Lead the Development of the Mellon Instant Issuing / Foil Monitoring project. MICFMA is a .NET Core MVC application utilizing Javelin printing machines to facilitate the arising need for instant card issuing.
+            - Assisted in the Development of the Mellon Pin File Management system. mPFM is .NET web application responsible for the credit card embossing process.
+
+          Software Engineer Intern:
+            - Developed a .NET Windows Forms terminal (POS) logging system, utilizing SFTP so that the QA department was able to detect any possible issues, whilst complying with PCI requirements.
+            - Developed a python TCP/IP library aimed at making HSM intercommunication, more developer-friendly. Became accustomed to with MyPy and MonkeyType.
+            - Assisted in the development of a .NET Core intercommunication library.
+
+  # Education
+  education:
+    enable: true
+    # title: "Custom Name"
+    index: false
+    items:
+      - title: "MSc in Data Science and Machine Learning"
+        school:
+          name: "National Technical University of Athens"
+          url: "https://www.ntua.gr/en"
+        date: "Sep 2022 - Present"
+        GPA: "9 out of 10"
+        content: |-
+          I'm currently working on my thesis wherein we explore harnessing cross attention control for instruction-based auto-regressive audio editing.
+
+          Leveraging the Prompt-to-Prompt concept, originally used in image editing, we expand its functionality for intuitive audio manipulation. Users can edit audio content based on textual prompts without necessitating model modifications, retraining, or additional data.
+
+          This research pioneers the application of these techniques to auto-regressive text-to-audio models, showing promise for breakthroughs in AI-driven audio synthesis and creative expression.
+      - title: "BSc in Computer Science and Engineering"
+        school:
+          name: "National and Kapodistrian University of Athens"
+          url: "https://en.uoa.gr"
+        date: "Sep 2015 - Feb 2022"
+        GPA: "8.49 out of 10"
+        content: |-
+          Carried out my BSc thesis "Generating realistic nanorough surfaces via a Generative Adversarial Network" under the supervision of Dr. G.Giannakopoulos and Dr. V.Constantoudis.
+
+          We focused on how a Generative Adversarial Network (GAN) based approach, given a nanorough surface data set, can learn to produce statistically equivalent samples. Additionally, we examined how pairing our model with a set of nanorough similarity metrics, can improve the realisticity of the resulting nanorough surfaces. We showcased via multiple experiments that our framework is able to produce sufficiently realistic nanorough surfaces, in many cases indistinguishable from real data.
+
+          - Worked on the [paper](https://dl.acm.org/doi/abs/10.1145/3549737.3549794) Generating Realistic Nanorough Surfaces Using an N-Gram-Graph Augmented Deep Convolutional Generative Adversarial Network which is a derivative of my BSc thesis.
+          - Presented our findings at 12th EETN Conference on Artificial Intelligence, [SETN 2022](https://hilab.di.ionio.gr/setn2022/).
+        featuredLink:
+          enable: true
+          name: "View the project!"
+          url: "https://github.com/billsioros/RoughGAN"
+
+  # Achievements
+  achievements:
+    enable: false
+    # title: "Custom Name"
+    items:
+      - title: Google kickstart runner
+        content: I solved all problems with optimal solution.
+        url: https://example.com
+        image: /images/achievment.jpg
+      - title: Facebook Hackathon Winner
+        content: Developed a product using Artificial Intelligence.
+        image: /images/achievment.jpg
+      - title: Hugo Profile
+        content: Developed a theme and getting 1K+ downloads per month.
+        url: "https://github.com/gurusabarish/hugo-profile"
+        image: /images/achievment.jpg
+      - title: Microsoft Imagine Runner
+        content: We are developed a product which can help others.
+      - title: Google Summer of Code
+        content: Contributed to a open source project.
+        url: https://example.com
+
+  # projects
+  projects:
+    enable: true
+    # title: "Custom Name"
+    items:
+      - title: RoughGAN
+        content: Generating Realistic Nanorough Surfaces Using an N-Gram-Graph Augmented Deep Convolutional Generative Adversarial Network.
+        image: /images/projects/roughgan.png
+        featured:
+          icon: fab fa-github
+          link: https://github.com/billsioros/RoughGAN
+        badges:
+          - "Python"
+          - "PyTorch"
+          - "Torchvision"
+          - "Numpy"
+          - "Plotly"
+          - "SymPy"
+          - "ray"
+
+      - title: Identification of human activities in the Amazon forests
+        content: Using satellite data to track the human footprint in the Amazon rainforest.
+        image: /images/projects/amazon.png
+        featured:
+          icon: fab fa-github
+          link: https://github.com/billsioros/Identification-of-human-activities-in-the-Amazon-forests
+        badges:
+          - "Python"
+          - "PyTorch"
+          - "Torchvision"
+          - "OpenCV"
+          - "scikit-learn"
+          - "Numpy"
+          - "Pandas"
+          - "Seaborn"
+
+      - title: Yet another Python Cookiecutte
+        content: A strongly opinionated, bleeding-edge Python template.
+        image: /images/projects/cookie.png
+        featured:
+          icon: fab fa-github
+          link: https://github.com/billsioros/cookiecutter-pypackage
+        badges:
+          - "Python"
+          - "Semantic Release"
+          - "Pre-commit"
+          - "Pytest"
+          - "Mkdocs"
+
+      - title: PyTSP
+        content: A Pythonic approach to the Travelling Salesman Problem.
+        image: /images/projects/tsp.png
+        featured:
+          icon: fab fa-github
+          link: https://github.com/billsioros/pytsp
+        badges:
+          - "Python"
+          - "Matplotlib"
+          - "Click"
+
+      - title: Trigon
+        content: A batteries-included python web framework.
+        image: /images/projects/trigon.png
+        featured:
+          icon: fab fa-github
+          link: https://github.com/billsioros/trigon
+        badges:
+          - "Python"
+          - "FastAPI"
+          - "SQLAlchemy"
+          - "Pydantic"
+          - "Alembic"
+          - "Uvicorn"
+
+      - title: Noobcash
+        content: A dummy blockchain server-client architecture.
+        image: /images/projects/blockchain.png
+        featured:
+          icon: fab fa-github
+          link: https://github.com/billsioros/noobcash-blockchain
+        badges:
+          - "Python"
+          - "Flask"
+          - "Gunicorn"
+          - "Pydantic"
+
+  #Contact
+  contact:
+    enable: false
+    # title: "Custom Name"
+    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    btnName: Mail me
+    btnLink: mailto:billsioros97@gmail.com
+    # formspree:
+    #   enable: true # `contact.email` value will be ignored
+    #   formId: abcdefgh # Take it from your form's endpoint, like 'https://formspree.io/f/abcdefgh'
+    #   emailCaption: "Enter your email address"
+    #   messageCaption: "Enter your message here"
+
+  footer:
+    recentPosts:
+      path: "posts"
+      count: 3
+      title: Recent Posts
+      enable: false
+      disableFeaturedImage: false
+    # socialNetworks:
+    #   github: https://github.com/billsioros
+    #   linkedin: https://www.linkedin.com/in/vassilis-sioros
+    #   twitter: https://twitter.com
+    #   instagram: https://instagram.com
+    #   facebook: https://facebook.com
+
+  # List pages like blogs and posts
+  listPages:
+    disableFeaturedImage: false
+
+  # Single pages like blog and post
+  singlePages:
+    readTime:
+      enable: true
+      content: "min read"
+    scrollprogress:
+      enable: true
+
+  # For translations
+  terms:
+    read: "Read"
+    toc: "Contents"
+    copyright: "All rights reserved"
+    pageNotFound: "Page not found"
+    emailText: "Check out this site"
+
+  datesFormat:
+    article: "Jan 2, 2006"
+    articleList: "Jan 2, 2006"
+    articleRecent: "Jan 2, 2006"
+
+  #customScripts: -| # You can add custom scripts which will be added before </body> tag
+  #  <script type="text/javascript"><!-- any script here --></script>

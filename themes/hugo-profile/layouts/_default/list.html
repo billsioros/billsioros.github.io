@@ -1,0 +1,100 @@
+{{ define "head" }}
+<meta name="description" content="{{ .Title }} of {{ .Site.Title }}">
+<link rel="stylesheet" href="{{ .Site.Params.staticPath }}/css/list.css" media="all">
+<!-- fontawesome -->
+<script defer src="{{ .Site.Params.staticPath }}/fontawesome-6/all-6.4.2.js"></script>
+{{ end }}
+
+{{ define "title" }}
+{{.Title }} | {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+<div class="container-fluid w-85 pt-5" id="list-page" style="width: 85%;">
+    <div class="row justify-content-center">
+    <!-- <h2 class="text-center pb-2">{{.Title}}</h2> -->
+    <main class="col-sm-12 col-md-12 col-lg-9">
+        <div id="search-container" class="d-flex d-none d-md-block flex-column align-items-center flex-wrap mx-xl-2" style="min-height: 80px;">
+            <input id="search" autocomplete="off" class="form-control mr-sm-2 d-none d-md-block" style="max-height: 45px;"
+            placeholder='{{ .Site.Params.navbar.searchPlaceholder | default "Ctrl + k to Search..."}}' aria-label="Search"
+            oninput="searchOnChange(event)">
+            <section id="search-content" class="py-2 w-62">
+                <div class="container" id="search-results"></div>
+            </section>
+        </div>
+        <div class="row justify-content-start">
+            {{ range .Paginator.Pages }}
+            <div class="col-lg-4 col-md-6 my-3">
+                <div class="card-columns">
+                    <div class="card h-100">
+                        {{ if and (not (.Site.Params.listPages.disableFeaturedImage | default false)) (.Params.image) }}
+                        <div class="card-header">
+                            <a href="{{ .RelPermalink }}">
+                                <img src="{{ .Params.image }}" class="card-img-top py-1" alt="{{ .Title }}">
+                            </a>
+                        </div>
+                        {{ end }}
+                        <div class="card-body bg-transparent p-4 shadow-sm">
+                            <a href="{{ .RelPermalink }}" class="primary-font card-title">
+                                <h5 class="card-title mb-3 bg-transparent" title="{{ .Title }}">{{ .Title | truncate 30 }}</h5>
+                            </a>
+                            <div class="card-text secondary-font">
+                                <p class="m-0">{{ .Summary | truncate 200}}</p>
+                            </div>
+                        </div>
+                        <div class="mt-auto post-footer bg-transparent pb-3">
+                            <span class="float-start bg-transparent">{{ .Date.Format (.Site.Params.datesFormat.articleList | default "January 2, 2006") }}</span>
+                            <!-- <a href="{{ .RelPermalink }}" class="float-end btn btn-outline-info btn-sm">{{ .Site.Params.terms.read | default "Read" }}</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+            <div class="row justify-content-center">
+                <div class="col-auto m-3">
+                    {{template "_internal/pagination.html" . }}
+                </div>
+            </div>
+        </div>
+    </main>
+    <aside class="col-sm-12 col-md-12 col-lg-3 d-flex d-none d-md-block flex-column align-items-center flex-wrap">
+        <div class="row w-100 mb-5">
+            <h4 class="panel-heading">Top Tags</h4>
+            <div id="tags" class="d-flex flex-wrap mt-3">
+                {{ range first 5 .Site.Taxonomies.tags.ByCount }}
+                <a class="list-tag btn btn-outline-primary" href="/tags/{{ .Name | urlize }}">{{ .Name }} <span class="text-muted small font-weight-light"> {{ .Count }} posts</span></a>
+                {{ end }}
+            </div>
+        </div>
+        <div class="row w-100">
+            <h4 class="panel-heading">Top Categories</h4>
+            <div class="categories mt-3 pb-3">
+                <div id="h_0" class="card-header d-flex justify-content-between hide-border-bottom">
+                    <span class="ms-2">
+                        <i class="fa fa-folder-open"></i>
+                        <a href="/categories/" class="mx-2">All</a>
+                        {{ with .Site.Taxonomies.categories }}
+                        <span class="text-muted small font-weight-light"> {{ len . }} categories</span>
+                        {{ end }}
+                    </span>
+                    <!-- <a href="#l_0" data-bs-toggle="collapse" aria-expanded="true" aria-label="h_0-trigger" class="category-trigger hide-border-bottom">
+                        <i class="fas fa-fw fa-angle-down"></i>
+                    </a> -->
+                </div>
+                <div id="l_0" class="collapse show" aria-expanded="true">
+                    <ul class="list-group">
+                        {{ range .Site.Taxonomies.categories.ByCount }}
+                        <li class="list-group-item">
+                            <i class="fa fa-folder-open"></i>
+                            <a href="/categories/{{ .Name | urlize }}" class="mx-2">{{ .Name }}</a>
+                            <span class="text-muted small font-weight-light"> {{ .Count }} posts</span>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </aside>
+    </div>
+</div>
+{{ end }}

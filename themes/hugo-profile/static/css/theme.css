@@ -1,0 +1,589 @@
+/* light mode */
+.light > *{
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* dark mode */
+.dark {
+    --background-color: var(--background-color-dark) !important;
+    --secondary-background-color: var(--secondary-background-color-dark) !important;
+    --text-color: var(--text-color-dark) !important;
+    --text-secondary-color: var(--text-secondary-color-dark) !important;
+    --primary-color: var(--primary-color-dark);
+    --brand-color: var(--brand-color-dark);
+    --secondary-color: var(--secondary-color-dark);
+}
+
+.text-secondary {
+    color: var(--text-secondary-color) !important;
+}
+
+button#theme-toggle {
+    border: none;
+    margin: auto 4px;
+}
+
+body.dark #moon {
+    vertical-align: middle;
+    display: none;
+}
+
+body.dark .chroma {
+    color: #f8f8f2;
+    background-color: #272822
+}
+
+body.dark .chroma .err {
+    color: #960050;
+    background-color: #1e0010
+}
+
+body.dark .chroma .lntd {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body.dark .chroma .lntable {
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: auto;
+    overflow: auto;
+    display: block;
+}
+
+body.dark .chroma .hl {
+    display: block;
+    width: 100%;
+    background-color: #ffffcc
+}
+
+body.dark .chroma .lnt {
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+    color: #7f7f7f
+}
+
+body.dark .chroma .ln {
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+    color: #7f7f7f
+}
+
+body.dark .chroma .k {
+    color: #66d9ef
+}
+
+body.dark .chroma .kc {
+    color: #66d9ef
+}
+
+body.dark .chroma .kd {
+    color: #66d9ef
+}
+
+body.dark .chroma .kn {
+    color: #f92672
+}
+
+body.dark .chroma .kp {
+    color: #66d9ef
+}
+
+body.dark .chroma .kr {
+    color: #66d9ef
+}
+
+body.dark .chroma .kt {
+    color: #66d9ef
+}
+
+body.dark .chroma .na {
+    color: #a6e22e
+}
+
+body.dark .chroma .nc {
+    color: #a6e22e
+}
+
+body.dark .chroma .no {
+    color: #66d9ef
+}
+
+body.dark .chroma .nd {
+    color: #a6e22e
+}
+
+body.dark .chroma .ne {
+    color: #a6e22e
+}
+
+body.dark .chroma .nf {
+    color: #a6e22e
+}
+
+body.dark .chroma .nx {
+    color: #a6e22e
+}
+
+body.dark .chroma .nt {
+    color: #f92672
+}
+
+body.dark .chroma .l {
+    color: #ae81ff
+}
+
+body.dark .chroma .ld {
+    color: #e6db74
+}
+
+body.dark .chroma .s {
+    color: #e6db74
+}
+
+body.dark .chroma .sa {
+    color: #e6db74
+}
+
+body.dark .chroma .sb {
+    color: #e6db74
+}
+
+body.dark .chroma .sc {
+    color: #e6db74
+}
+
+body.dark .chroma .dl {
+    color: #e6db74
+}
+
+body.dark .chroma .sd {
+    color: #e6db74
+}
+
+body.dark .chroma .s2 {
+    color: #e6db74
+}
+
+body.dark .chroma .se {
+    color: #ae81ff
+}
+
+body.dark .chroma .sh {
+    color: #e6db74
+}
+
+body.dark .chroma .si {
+    color: #e6db74
+}
+
+body.dark .chroma .sx {
+    color: #e6db74
+}
+
+body.dark .chroma .sr {
+    color: #e6db74
+}
+
+body.dark .chroma .s1 {
+    color: #e6db74
+}
+
+body.dark .chroma .ss {
+    color: #e6db74
+}
+
+body.dark .chroma .m {
+    color: #ae81ff
+}
+
+body.dark .chroma .mb {
+    color: #ae81ff
+}
+
+body.dark .chroma .mf {
+    color: #ae81ff
+}
+
+body.dark .chroma .mh {
+    color: #ae81ff
+}
+
+body.dark .chroma .mi {
+    color: #ae81ff
+}
+
+body.dark .chroma .il {
+    color: #ae81ff
+}
+
+body.dark .chroma .mo {
+    color: #ae81ff
+}
+
+body.dark .chroma .o {
+    color: #f92672
+}
+
+body.dark .chroma .ow {
+    color: #f92672
+}
+
+body.dark .chroma .c {
+    color: #75715e
+}
+
+body.dark .chroma .ch {
+    color: #75715e
+}
+
+body.dark .chroma .cm {
+    color: #75715e
+}
+
+body.dark .chroma .c1 {
+    color: #75715e
+}
+
+body.dark .chroma .cs {
+    color: #75715e
+}
+
+body.dark .chroma .cp {
+    color: #75715e
+}
+
+body.dark .chroma .cpf {
+    color: #75715e
+}
+
+body.dark .chroma .gd {
+    color: #f92672
+}
+
+body.dark .chroma .ge {
+    font-style: italic
+}
+
+body.dark .chroma .gi {
+    color: #a6e22e
+}
+
+body.dark .chroma .gs {
+    font-weight: bold
+}
+
+body.dark .chroma .gu {
+    color: #75715e
+}
+
+body:not(.dark) #sun {
+    display: none;
+}
+
+body:not(.dark) .chroma {
+    color: #272822;
+    background-color: #fafafa
+}
+
+body:not(.dark) .chroma .err {
+    color: #960050;
+    background-color: #1e0010
+}
+
+body:not(.dark) .chroma .lntd {
+    vertical-align: top;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body:not(.dark) .chroma .lntable {
+    border-spacing: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    width: auto;
+    overflow: auto;
+    display: block;
+}
+
+body:not(.dark) .chroma .hl {
+    display: block;
+    width: 100%;
+    background-color: #ffffcc
+}
+
+body:not(.dark) .chroma .lnt {
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+    color: #7f7f7f
+}
+
+body:not(.dark) .chroma .ln {
+    margin-right: 0.4em;
+    padding: 0 0.4em 0 0.4em;
+    color: #7f7f7f
+}
+
+body:not(.dark) .chroma .k {
+    color: #00a8c8
+}
+
+body:not(.dark) .chroma .kc {
+    color: #00a8c8
+}
+
+body:not(.dark) .chroma .kd {
+    color: #00a8c8
+}
+
+body:not(.dark) .chroma .kn {
+    color: #f92672
+}
+
+body:not(.dark) .chroma .kp {
+    color: #00a8c8
+}
+
+body:not(.dark) .chroma .kr {
+    color: #00a8c8
+}
+
+body:not(.dark) .chroma .kt {
+    color: #00a8c8
+}
+
+body:not(.dark) .chroma .n {
+    color: #111111
+}
+
+body:not(.dark) .chroma .na {
+    color: #75af00
+}
+
+body:not(.dark) .chroma .nb {
+    color: #111111
+}
+
+body:not(.dark) .chroma .bp {
+    color: #111111
+}
+
+body:not(.dark) .chroma .nc {
+    color: #75af00
+}
+
+body:not(.dark) .chroma .no {
+    color: #00a8c8
+}
+
+body:not(.dark) .chroma .nd {
+    color: #75af00
+}
+
+body:not(.dark) .chroma .ni {
+    color: #111111
+}
+
+body:not(.dark) .chroma .ne {
+    color: #75af00
+}
+
+body:not(.dark) .chroma .nf {
+    color: #75af00
+}
+
+body:not(.dark) .chroma .fm {
+    color: #111111
+}
+
+body:not(.dark) .chroma .nl {
+    color: #111111
+}
+
+body:not(.dark) .chroma .nn {
+    color: #111111
+}
+
+body:not(.dark) .chroma .nx {
+    color: #75af00
+}
+
+body:not(.dark) .chroma .py {
+    color: #111111
+}
+
+body:not(.dark) .chroma .nt {
+    color: #f92672
+}
+
+body:not(.dark) .chroma .nv {
+    color: #111111
+}
+
+body:not(.dark) .chroma .vc {
+    color: #111111
+}
+
+body:not(.dark) .chroma .vg {
+    color: #111111
+}
+
+body:not(.dark) .chroma .vi {
+    color: #111111
+}
+
+body:not(.dark) .chroma .vm {
+    color: #111111
+}
+
+body:not(.dark) .chroma .l {
+    color: #ae81ff
+}
+
+body:not(.dark) .chroma .ld {
+    color: #d88200
+}
+
+body:not(.dark) .chroma .s {
+    color: #d88200
+}
+
+body:not(.dark) .chroma .sa {
+    color: #d88200
+}
+
+body:not(.dark) .chroma .sb {
+    color: #d88200
+}
+
+body:not(.dark) .chroma .sc {
+    color: #d88200
+}
+
+body:not(.dark) .chroma .dl {
+    color: #d88200
+}
+
+body:not(.dark) .chroma .sd {
+    color: #d88200
+}
+
+body:not(.dark) .chroma .s2 {
+    color: #d88200
+}
+
+body:not(.dark) .chroma .se {
+    color: #8045ff
+}
+
+body:not(.dark) .chroma .sh {
+    color: #d88200
+}
+
+body:not(.dark) .chroma .si {
+    color: #d88200
+}
+
+body:not(.dark) .chroma .sx {
+    color: #d88200
+}
+
+body:not(.dark) .chroma .sr {
+    color: #d88200
+}
+
+body:not(.dark) .chroma .s1 {
+    color: #d88200
+}
+
+body:not(.dark) .chroma .ss {
+    color: #d88200
+}
+
+body:not(.dark) .chroma .m {
+    color: #ae81ff
+}
+
+body:not(.dark) .chroma .mb {
+    color: #ae81ff
+}
+
+body:not(.dark) .chroma .mf {
+    color: #ae81ff
+}
+
+body:not(.dark) .chroma .mh {
+    color: #ae81ff
+}
+
+body:not(.dark) .chroma .mi {
+    color: #ae81ff
+}
+
+body:not(.dark) .chroma .il {
+    color: #ae81ff
+}
+
+body:not(.dark) .chroma .mo {
+    color: #ae81ff
+}
+
+body:not(.dark) .chroma .o {
+    color: #f92672
+}
+
+body:not(.dark) .chroma .ow {
+    color: #f92672
+}
+
+body:not(.dark) .chroma .p {
+    color: #111111
+}
+
+body:not(.dark) .chroma .c {
+    color: #75715e
+}
+
+body:not(.dark) .chroma .ch {
+    color: #75715e
+}
+
+body:not(.dark) .chroma .cm {
+    color: #75715e
+}
+
+body:not(.dark) .chroma .c1 {
+    color: #75715e
+}
+
+body:not(.dark) .chroma .cs {
+    color: #75715e
+}
+
+body:not(.dark) .chroma .cp {
+    color: #75715e
+}
+
+body:not(.dark) .chroma .cpf {
+    color: #75715e
+}
+
+body:not(.dark) .chroma .ge {
+    font-style: italic
+}
+
+body:not(.dark) .chroma .gs {
+    font-weight: bold
+}
+
+body *::selection {
+    color: var(--text-color) !important;
+    background-color: var(--primary-color) !important;
+}

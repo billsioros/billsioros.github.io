@@ -1,0 +1,156 @@
+#list-page .card {
+    background-color: var(--secondary-color) !important;
+    box-shadow: 0px 8px 56px rgba(15, 80, 100, 0.16);
+    border-radius: .75rem;
+    cursor: context-menu;
+    overflow: hidden;
+    border: none;
+}
+
+#list-page .card a {
+    text-decoration: none;
+}
+
+#list-page .card a h5 {
+    color: var(--text-color) !important;
+}
+
+#list-page .card:hover {
+    transition: all 0.3s ease-out;
+    transform: translateY(-5px);
+}
+
+#search-content .card:hover {
+    transform: none;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(-3px);
+}
+
+
+#list-page .card-text * {
+    background-color: var(--secondary-color) !important;
+}
+
+#list-page .post-footer {
+    padding: .5rem 1rem;
+    background-color: var(--secondary-color) !important;
+    color: var(--text-color) !important;
+    border-top: 1px solid rgba(15, 80, 100, 0.16);
+    opacity: 0.9;
+}
+
+#list-page .post-footer a {
+    background-color: var(--secondary-color) !important;
+    color: var(--text-secondary-color) !important;
+    border-color: var(--primary-color) !important;
+    transition: none;
+}
+
+#list-page .post-footer a:focus {
+    box-shadow: none !important;
+}
+
+#list-page .post-footer a:hover {
+    color: var(--primary-color) !important;
+}
+
+#list-page .card > .card-header {
+    padding: 0 !important;
+    border: none !important;
+    background-color: var(--secondary-color) !important;
+}
+
+#list-page .card > .card-header .card-img-top {
+    width: 100%;
+    max-height: 250px !important;
+    background-color: transparent !important;
+}
+
+/* pagination */
+#list-page ul li a {
+    transition: none;
+    border-color: var(--secondary-color);
+    background-color: var(--secondary-color) !important;
+    color: var(--text-color) !important;
+}
+
+#list-page ul li a:focus {
+    box-shadow: none;
+}
+
+#list-page .page-item.active .page-link {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color) !important;
+    color: var(--secondary-color) !important;
+}
+
+/* tags */
+.list-tag {
+    font-size: .85rem;
+    border-radius: .8rem;
+    padding: .3rem .5rem;
+    margin: 0 .5rem .75rem 0;
+    display: inline-block;
+    min-width: 2rem;
+    text-align: center;
+    line-height: 1.3rem;
+    border: 1px solid var(--text-secondary-color);
+    text-decoration: none;
+    color: var(--text-secondary-color);
+}
+
+.list-tag:hover {
+    opacity: .8;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    transition: all 0.3s ease-out;
+    transform: translateY(-2px);
+}
+
+/* categories */
+
+.category {
+    background-color: var(--secondary-color) !important;
+    border-radius: .75rem;
+    box-shadow: 0px 8px 56px rgb(15 80 100 / 16%);
+}
+
+.categories .list-group-item {
+    color: var(--text-secondary-color);
+    border-left: none;
+    border-right: none;
+    padding-left: 2rem;
+    background-color: var(--secondary-color) !important;
+    box-shadow: 0px 8px 56px rgba(15, 80, 100, 0.16);
+    cursor: context-menu;
+    overflow: hidden;
+    border: none;
+}
+
+.categories .list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.categories .list-group-item:hover {
+    transition: all 0.3s ease-out;
+    transform: translateY(+1px);
+    opacity: 0.8;
+}
+
+.categories .card-header {
+    background-color: var(--secondary-color);
+    box-shadow: 0px 8px 56px rgba(15, 80, 100, 0.16);
+}
+
+.categories .card-header:hover {
+    opacity: 0.8;
+    transition: all 0.3s ease-out;
+    transform: translateY(+1px);
+}
+
+.categories a {
+    color: var(--text-color);
+    text-decoration: none;
+}
