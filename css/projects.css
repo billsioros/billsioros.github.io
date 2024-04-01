@@ -44,14 +44,14 @@
     border-bottom-right-radius: 1rem;
 }
 
-#projects .card:hover .card-img-top {
+/* #projects .card:hover .card-img-top {
     transform: scale(1.2);
     transition: all 0.3s ease-out;
 }
 
 #projects .card-img-top {
     transition: transform 0.3s;
-}
+} */
 
 #projects .float-end .btn {
     transition: none;
