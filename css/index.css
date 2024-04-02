@@ -131,12 +131,12 @@ header .navbar.animate {
 }
 
 #hero a.btn.social-icon {
-    color: var(--primary-color) !important;
+    color: var(--text-color) !important;
     line-height: 0%;
     border-radius: 50%;
     margin-top: 50px;
     padding: 0.7rem;
-    border: 1px solid var(--primary-color);
+    border: 1px solid var(--text-color);
     transition: none;
 }
 
