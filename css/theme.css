@@ -11,6 +11,7 @@
     --text-color: var(--text-color-dark) !important;
     --text-secondary-color: var(--text-secondary-color-dark) !important;
     --primary-color: var(--primary-color-dark);
+    --brand-color: var(--brand-color-dark);
     --secondary-color: var(--secondary-color-dark);
 }
 

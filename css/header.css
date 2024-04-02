@@ -39,11 +39,11 @@ header .nav-link{
     transition: none !important;
 }
 .navbar-brand {
-    color: var(--primary-color) !important;
+    color: var(--brand-color) !important;
     opacity: 0.95;
-} 
+}
 .navbar .nav-link:hover {
-    color: var(--primary-color) !important;
+    color: var(--brand-color) !important;
 }
 
 li > .dropdown-toggle:focus{
