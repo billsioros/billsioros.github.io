@@ -80,7 +80,7 @@ li > .dropdown-toggle:focus{
     -ms-scroll-chaining: none;
     scrollbar-width: none;
     display: none;
-    border-radius: 1rem;
+    border-radius: .75rem;
     box-shadow: 0 0 10px rgba(0,0,0,0.2);
     z-index: 9999;
     width: 10%;
@@ -100,11 +100,11 @@ li > .dropdown-toggle:focus{
     margin-bottom: 10px;
 }
 
-#search-results > .card :hover {
+/* #search-results > .card :hover {
     border-radius: 1rem !important;
     background-color: var(--background-color) !important;
     transition: .2s;
-}
+} */
 
 #search-results .card a {
     opacity: 0.9;

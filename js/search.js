@@ -45,8 +45,8 @@ async function searchOnChange(evt) {
       searchResults.map((item) => {
         searchResultsHtml += `<div class="card">
                         <a href="${item.permalink}">
-                            <div class="p-3">
-                                <h5>${item.title}</h5>
+                            <div class="p-2">
+                                <p class="m-0">${item.title}</p>
                                 <div>${item.description}</div>
                             </div>
                        </a>
