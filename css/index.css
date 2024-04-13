@@ -228,7 +228,7 @@ header .navbar.animate {
 }
 
 #about ul li::before {
-    content: "•";
+    content: "▸";
     color: var(--primary-color);
     position: absolute;
     left: 0px;
