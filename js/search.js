@@ -42,7 +42,7 @@ async function searchOnChange(evt) {
     });
     if (searchResults.length > 0) {
       let searchResultsHtml = "";
-      searchResults.map((item) => {
+      searchResults.map((item, index) => {
         searchResultsHtml += `<div class="card">
                         <a href="${item.permalink}">
                             <div class="p-2">
@@ -50,6 +50,7 @@ async function searchOnChange(evt) {
                                 <div>${item.description}</div>
                             </div>
                        </a>
+                       ${index < searchResults.length - 1 ? '<hr class="hr my-2" />' : ''}
                     </div>`;
       });
       document.getElementById("search-results").innerHTML = searchResultsHtml;
@@ -73,18 +74,18 @@ function alignSearchContent() {
       let searchButtonPosition;
       if (window.innerWidth > 768) {
         searchButtonPosition = searchButtonEle[0].getBoundingClientRect();
-        document.getElementById("search-content").style.width = "500px";
+        document.getElementById("search-content").style.width = "40%";
       } else {
         var navbarCollapse = document.querySelector("#navbarContent");
         navbarCollapse.classList.add("show");
         searchButtonPosition = searchButtonEle[1].getBoundingClientRect();
-        document.getElementById("search-content").style.width = "300px";
+        document.getElementById("search-content").style.width = "40%";
       }
 
       document.getElementById("search-content").style.top =
         searchButtonPosition.top + 50 + "px";
-      document.getElementById("search-content").style.left =
-        searchButtonPosition.left + "px";
+      // document.getElementById("search-content").style.left =
+      //   searchButtonPosition.left + "px";
     }
   }
 }
