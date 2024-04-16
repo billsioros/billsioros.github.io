@@ -76,3 +76,15 @@
     background-color: var(--primary-color) !important;
     color: var(--secondary-color) !important;
 }
+
+/* tags */
+.list-tag {
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-bottom: 4px;
+    margin-left: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--text-secondary-color);
+    text-decoration: none;
+    color: var(--text-secondary-color);
+}

@@ -74,12 +74,12 @@ function alignSearchContent() {
       let searchButtonPosition;
       if (window.innerWidth > 768) {
         searchButtonPosition = searchButtonEle[0].getBoundingClientRect();
-        document.getElementById("search-content").style.width = "40%";
+        document.getElementById("search-content").style.width = "33.5%";
       } else {
         var navbarCollapse = document.querySelector("#navbarContent");
         navbarCollapse.classList.add("show");
         searchButtonPosition = searchButtonEle[1].getBoundingClientRect();
-        document.getElementById("search-content").style.width = "40%";
+        document.getElementById("search-content").style.width = "33.5%";
       }
 
       document.getElementById("search-content").style.top =
