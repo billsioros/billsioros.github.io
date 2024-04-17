@@ -61,7 +61,7 @@
     padding: 10px 10px;
     border-left: 6px solid var(--primary-color) !important;
     color: var(--text-secondary-color) !important;
-    font-weight: 600;
+    /* font-weight: 600; */
     font-size: 16px;
     margin: 20px 0;
     border-radius: 5px;
