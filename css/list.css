@@ -88,3 +88,8 @@
     text-decoration: none;
     color: var(--text-secondary-color);
 }
+
+.list-tag:hover {
+    opacity: .8;
+    color: var(--text-secondary-color);
+}
