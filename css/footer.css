@@ -83,7 +83,7 @@ footer .card > .card-header .card-img-top {
 
 #recent-posts .card:hover {
     transition: all 0.3s ease-out;
-    transform: translateY(-7px);
+    transform: translateY(-5px);
 }
 
 #recent-posts .card-text * {

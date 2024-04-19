@@ -50,8 +50,8 @@ async function searchOnChange(evt) {
                                 <div>${item.description}</div>
                             </div>
                        </a>
-                       ${index < searchResults.length - 1 ? '<hr class="hr my-2" />' : ''}
-                    </div>`;
+                    </div>
+                    ${index < searchResults.length - 1 ? '<hr class="hr my-2" />' : ''}`;
       });
       document.getElementById("search-results").innerHTML = searchResultsHtml;
     } else {
@@ -74,12 +74,12 @@ function alignSearchContent() {
       let searchButtonPosition;
       if (window.innerWidth > 768) {
         searchButtonPosition = searchButtonEle[0].getBoundingClientRect();
-        document.getElementById("search-content").style.width = "55%";
+        document.getElementById("search-content").style.width = "62%";
       } else {
         var navbarCollapse = document.querySelector("#navbarContent");
         navbarCollapse.classList.add("show");
         searchButtonPosition = searchButtonEle[1].getBoundingClientRect();
-        document.getElementById("search-content").style.width = "55%";
+        document.getElementById("search-content").style.width = "62%";
       }
 
       document.getElementById("search-content").style.top =
