@@ -21,7 +21,7 @@ header .navbar .navbar-nav a {
 
 #theme-toggle:hover {
     transition: all 0.3s ease-out;
-    transform: translateY(-3px);
+    transform: translateY(+2px);
 }
 
 .navbar-toggler {
@@ -47,9 +47,14 @@ header .nav-link{
     color: var(--brand-color) !important;
     opacity: 0.95;
 }
+.navbar-brand:hover {
+    transition: all 0.3s ease-out;
+    transform: translateY(+2px);
+}
 .navbar .nav-link:hover {
     color: var(--primary-color) !important;
     font-weight: 700;
+    transition: all 0.3s ease-in-out;
 }
 
 li > .dropdown-toggle:focus{
