@@ -74,18 +74,18 @@ function alignSearchContent() {
       let searchButtonPosition;
       if (window.innerWidth > 768) {
         searchButtonPosition = searchButtonEle[0].getBoundingClientRect();
-        document.getElementById("search-content").style.width = "50%";
+        document.getElementById("search-content").style.width = "55%";
       } else {
         var navbarCollapse = document.querySelector("#navbarContent");
         navbarCollapse.classList.add("show");
         searchButtonPosition = searchButtonEle[1].getBoundingClientRect();
-        document.getElementById("search-content").style.width = "50%";
+        document.getElementById("search-content").style.width = "55%";
       }
 
       document.getElementById("search-content").style.top =
-        searchButtonPosition.top + 50 + "px";
-      // document.getElementById("search-content").style.left =
-      //   searchButtonPosition.left + "px";
+        searchButtonPosition.top + 65 + "px";
+      document.getElementById("search-content").style.left =
+        searchButtonPosition.left + "px";
     }
   }
 }
