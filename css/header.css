@@ -19,6 +19,11 @@ header .navbar .navbar-nav a {
     color: var(--text-color) !important;
 }
 
+#theme-toggle:hover {
+    transition: all 0.3s ease-out;
+    transform: translateY(-3px);
+}
+
 .navbar-toggler {
     border: none;
     outline: none;
@@ -43,7 +48,8 @@ header .nav-link{
     opacity: 0.95;
 }
 .navbar .nav-link:hover {
-    color: var(--brand-color) !important;
+    color: var(--primary-color) !important;
+    font-weight: 700;
 }
 
 li > .dropdown-toggle:focus{

@@ -199,8 +199,10 @@
     margin-bottom: 0.8rem;
 }
 
-#single aside.tags ul.tags-ul li:hover {
+#single aside.tags ul.tags-ul li a:hover {
     opacity: 0.8;
+    border: 1px solid var(--primary-color);
+    color: var(--primary-color);
 }
 
 
