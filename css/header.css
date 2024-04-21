@@ -40,6 +40,10 @@ header .navbar .navbar-nav a {
     font-size: 16px !important;
     opacity: 0.95;
 }
+.navbar-text:hover {
+    transition: all 0.3s ease-out;
+    transform: translateY(+2px);
+}
 header .nav-link{
     transition: none !important;
 }

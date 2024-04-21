@@ -207,6 +207,8 @@
     border: 1px solid var(--primary-color);
     color: var(--primary-color);
     background-color: var(--background-color);
+    transition: all 0.3s ease-out;
+    transform: translateY(-2px);
 }
 
 
