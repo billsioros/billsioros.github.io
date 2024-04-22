@@ -283,6 +283,11 @@
     margin-left: 0;
 }
 
+#single aside.social .social-content ul li:hover {
+    transition: all 0.3s ease-out;
+    transform: translateY(-2px);
+}
+
 #single aside.social .social-content ul li:hover a {
     opacity: .8;
     color: var(--primary-color);
