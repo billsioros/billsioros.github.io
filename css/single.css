@@ -140,6 +140,12 @@
   background-color: var(--secondary-color) !important;
 }
 
+.chroma::-webkit-scrollbar {
+    height: 0px;
+    width: 8px;
+    background-color: var(--secondary-color);
+}
+
 /* list */
 
 #single .page-content ol, #single .page-content ul {
@@ -213,6 +219,7 @@
 
 
 /*TOC*/
+/*
 #single aside.toc {
     padding: .7rem 1rem;
     max-height: 50vh;
@@ -226,7 +233,6 @@
 }
 
 #single aside.toc .toc-content ol, #single aside.toc .toc-content ul {
-    /* margin-bottom: 1em; */
     padding-left: .5em;
     list-style: none;
     opacity: 0.9;
@@ -247,6 +253,98 @@
 #single aside.toc .toc-content ol li li, #single aside.toc .toc-content ul li li {
     padding-left: .7em;
 }
+*/
+
+#single aside.toc {
+    padding: .7rem 1rem;
+    max-height: 50vh;
+    overflow: scroll;
+}
+
+#single aside.toc a {
+    text-decoration: none;
+}
+
+@-webkit-keyframes scroll-up {
+    from {
+        opacity: 0;
+        position: relative;
+        top: 2rem;
+    }
+
+    to {
+        opacity: 1;
+        position: relative;
+        top: 0;
+    }
+}
+
+@keyframes scroll-up {
+    from {
+        opacity: 0;
+        position: relative;
+        top: 2rem;
+    }
+
+    to {
+        opacity: 1;
+        position: relative;
+        top: 0;
+    }
+}
+
+#single #toc-wrapper {
+  top: 4rem;
+  transition: top 0.2s ease-in-out;
+  -webkit-animation: scroll-up 0.8s;
+  animation: scroll-up 0.8s;
+}
+
+#single #toc-wrapper ol {
+  list-style: none;
+  font-size: 1rem;
+  line-height: 1.25;
+  padding-left: 0;
+}
+
+#single #toc-wrapper ol li:not(:last-child) {
+  margin: 0.4rem 0;
+}
+
+#single #toc-wrapper ol li a {
+  padding: 0.2rem 0 0.2rem 1.25rem;
+}
+
+/* Overwrite TOC plugin style */
+#single #toc-wrapper ol .toc-link {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#single #toc-wrapper ol .toc-link:hover {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+/* #single #toc-wrapper ol .toc-link::before {
+  display: none;
+} */
+
+#single #toc-wrapper ol .is-active-link {
+  color: var(--primary-color) !important;
+  font-weight: 600;
+}
+
+#single #toc-wrapper ol .is-active-link::before {
+  background-color: var(--primary-color) !important;
+}
+
+#single #toc-wrapper ol ol {
+  padding-left: 0.75rem;
+}
+
 
 /* Social */
 
@@ -337,7 +435,7 @@
 }
 
 /* Singlepage scroll progress end */
-body {
+/* body {
     counter-reset: h2
 }
 
@@ -375,4 +473,4 @@ h4:before {
 .toc li a:before {
     content: counters(item, ".") ". ";
     counter-increment: item
-}
+} */
