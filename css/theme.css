@@ -19,17 +19,8 @@
     color: var(--text-secondary-color) !important;
 }
 
-#theme-toggle:focus {
-    outline: 0;
-}
-
-#theme-toggle svg {
-    height: 18px;
-}
-
 button#theme-toggle {
     border: none;
-    font-size: 26px;
     margin: auto 4px;
 }
 
