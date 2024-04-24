@@ -78,8 +78,7 @@ header .nav-link{
     transform: translateY(+3px);
 }
 .navbar .nav-link:hover {
-    color: var(--primary-color) !important;
-    font-weight: 700;
+    opacity: 0.8;
     transition: all 0.3s ease-in-out;
 }
 
