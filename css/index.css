@@ -316,9 +316,11 @@ header .navbar.animate {
     transition: none !important;
 }
 
-#experience .nav-item .nav-link:hover {
-    border-bottom: 2px solid var(--primary-color);
+#experience .nav-item .nav-link:not(.active):hover {
+    /* border-bottom: 2px solid var(--primary-color); */
     opacity: 0.8;
+    transition: all 0.3s ease-out;
+    transform: translateY(+2px);
 }
 
 #experience a {
@@ -443,9 +445,11 @@ header .navbar.animate {
     transition: none !important;
 }
 
-#education .nav-item .nav-link:hover {
-    border-bottom: 2px solid var(--primary-color);
+#education .nav-item .nav-link:not(.active):hover {
+    /* border-bottom: 2px solid var(--primary-color); */
     opacity: 0.8;
+    transition: all 0.3s ease-out;
+    transform: translateY(+2px);
 }
 
 #education a {
