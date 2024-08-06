@@ -55,6 +55,10 @@
 }
 
 #list-page .card > .card-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 300px;
     padding: 0 !important;
     border: none !important;
     background-color: var(--secondary-color) !important;
