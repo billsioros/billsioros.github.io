@@ -2,7 +2,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta http-equiv="Accept-CH" content="DPR, Viewport-Width, Width">
+{{ if not .Params.image }}
 <meta property="og:image" content={{ "/images/me.jpg" | absURL }} />
+{{ end }}
 <link rel="icon" href={{ .Site.Params.favicon | default "/fav.png" }} type="image/gif">
 
 <!-- Fonts -->

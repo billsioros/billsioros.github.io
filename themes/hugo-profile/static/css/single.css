@@ -28,6 +28,8 @@
 #single .page-content img {
     max-width: 100%;
     border-radius: 1rem;
+    display: block;
+    margin: 0 auto;
 }
 
 #single .page-content a {
@@ -73,10 +75,12 @@
 
 /* table */
 #single .page-content table {
-    width: auto;
+    width: fit-content;
     border-radius: 5px;
     padding: 0.1rem;
     margin-bottom: 1.2em;
+    margin-left: auto;
+    margin-right: auto;
     max-width: 100%;
     display: block;
     overflow-x: auto;
@@ -413,6 +417,44 @@
     transition: all 0.2s ease-out;
     transform: translateY(-5px);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+#single .article-control {
+    min-height: 50px;
+    min-width: 48%;
+    padding: .5rem 1.25rem;
+    border: none;
+    outline: none;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    cursor: pointer;
+    border-radius: 10%;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.3s ease-out;
+    border-radius: .7rem;
+}
+
+#single .previousPost {
+    text-align: end;
+}
+
+#single .nextPost {
+    text-align: start;
+}
+
+/* Change color on hover */
+#single .article-control:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    transition: all 0.2s ease-out;
+    transform: translateY(+2px);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ensure span text color also changes on hover */
+#single .article-control:hover .text-muted {
+    color: var(--secondary-color) !important;
 }
 
 /* Singlepage scroll progress start */

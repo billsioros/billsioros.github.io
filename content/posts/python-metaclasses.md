@@ -1,17 +1,16 @@
 ---
 title: "Let's Talk Python Metaclasses"
-date: 2024-04-17T13:52:18+44:21
+date: 2024-04-17
 draft: false
 colab: "https://colab.research.google.com/github/billsioros/billsioros.github.io/blob/master/static/code/python_metaclasses.ipynb"
 author: "Vassilis Sioros"
 categories:
-  - Python
   - Programming Patterns
 tags:
   - Python
-  - Patterns
-  - Metaclasses
+  - Programming Patterns
 image: /images/posts/metaclasses.png
+thumbnail: /images/posts/metaclasses.thumbnail.png
 description: "Where Classes Get Their Magic!"
 toc:
 ---

@@ -128,11 +128,11 @@ params:
     intro: "Hi, my name is"
     title: "Vassilis Sioros."
     subtitle: "Software / Machine Learning Engineer"
-    content: "I'm currently pursuing a MSc. degree in [Data Science and Machine Learning](https://dsml.ece.ntua.gr/) at [National Technical University of Athens](https://www.ntua.gr/en). I’m extremely interested in Natural Language Processing and Text-to-Image Generation. I am currently working on various projects at [Group4Life](https://www.group4life.com) and I have previously worked as a Software Engineer at [Kaizen Gaming](https://kaizengaming.com) based in Athens, Greece."
-    # image: /images/hero.svg
+    content: "I am currently pursuing a MSc in [Data Science and Machine Learning](https://dsml.ece.ntua.gr/) at [National Technical University of Athens](https://www.ntua.gr/en), with a research focus on Natural Language Processing and Generative AI. Recently, I embarked on a new chapter in my career, serving as a CTO at [Group4Life](https://www.group4life.com) and managing people for the first time. I have previously worked as a Software Engineer at [Kaizen Gaming](https://kaizengaming.com) based in Athens, Greece. I have a background in software engineering, with extensive experience in Python and .NET technologies."
+    image: /images/me.jpg
     bottomImage:
       enable: false
-    # roundImage: true # Make hero image circular | default false
+    roundImage: true # Make hero image circular | default false
     button:
       enable: false
       name: "Resume"
@@ -152,7 +152,7 @@ params:
 
   # About
   about:
-    enable: true
+    enable: false
     title: "About Me"
     image: "/images/me.jpg"
     content: |-
@@ -340,19 +340,17 @@ params:
           - "Matplotlib"
           - "Click"
 
-      - title: Trigon
-        content: A batteries-included python web framework.
-        image: /images/projects/trigon.png
+      - title: HeartBeat
+        content: A heart failure detection system.
+        image: /images/projects/heartbeat.png
         featured:
           icon: fab fa-github
-          link: https://github.com/billsioros/trigon
+          link: https://github.com/billsioros/heartbeat
         badges:
-          - "Python"
           - "FastAPI"
-          - "SQLAlchemy"
-          - "Pydantic"
-          - "Alembic"
-          - "Uvicorn"
+          - "React"
+          - "Machine Learning"
+          - "Docker"
 
       - title: Noobcash
         content: A dummy blockchain server-client architecture.

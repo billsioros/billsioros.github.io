@@ -103,6 +103,22 @@
             </div>
           </aside>
           {{ end }}
+          {{ if or (.Params.previousPost) (.Params.nextPost) }}
+          <div style="display: flex; flex-direction: row; justify-content: space-between;">
+              {{ if .Params.previousPost }}
+              <a href='{{ .Params.previousPost }}' class="article-control previousPost">
+                <i class="fas fa-angle-left"></i>
+                <span class="text-muted font-weight-light mx-2">Previous</span>
+              </a>
+              {{ end }}
+              {{ if .Params.nextPost }}
+              <a href='{{ .Params.nextPost }}' class="article-control nextPost">
+                <span class="text-muted font-weight-light mx-2">Next</span>
+                <i class="fas fa-angle-right"></i>
+              </a>
+              {{ end }}
+          </div>
+          {{ end }}
         </div>
       </div>
     </div>

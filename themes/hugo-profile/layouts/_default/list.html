@@ -27,10 +27,10 @@
             <div class="col-lg-4 col-md-6 my-3">
                 <div class="card-columns">
                     <div class="card h-100">
-                        {{ if and (not (.Site.Params.listPages.disableFeaturedImage | default false)) (.Params.image) }}
+                        {{ if and (not (.Site.Params.listPages.disableFeaturedImage | default false)) (.Params.thumbnail) }}
                         <div class="card-header">
                             <a href="{{ .RelPermalink }}">
-                                <img src="{{ .Params.image }}" class="card-img-top py-1" alt="{{ .Title }}">
+                                <img src="{{ .Params.thumbnail }}" class="card-img-top py-1" alt="{{ .Title }}">
                             </a>
                         </div>
                         {{ end }}
@@ -59,7 +59,7 @@
     </main>
     <aside class="col-sm-12 col-md-12 col-lg-3 d-flex d-none d-md-block flex-column align-items-center flex-wrap">
         <div class="row w-100 mb-5">
-            <h4 class="panel-heading">Top Tags</h4>
+            <h4 class="panel-heading">Popular Tags</h4>
             <div id="tags" class="d-flex flex-wrap mt-3">
                 {{ range first 5 .Site.Taxonomies.tags.ByCount }}
                 <a class="list-tag btn btn-outline-primary" href="/tags/{{ .Name | urlize }}">{{ .Name }} <span class="text-muted small font-weight-light"> {{ .Count }} posts</span></a>
@@ -67,7 +67,7 @@
             </div>
         </div>
         <div class="row w-100">
-            <h4 class="panel-heading">Top Categories</h4>
+            <h4 class="panel-heading">Popular Categories</h4>
             <div class="categories mt-3 pb-3">
                 <div id="h_0" class="card-header d-flex justify-content-between hide-border-bottom">
                     <span class="ms-2">
@@ -86,7 +86,7 @@
                         {{ range .Site.Taxonomies.categories.ByCount }}
                         <li class="list-group-item">
                             <i class="fa fa-folder-open"></i>
-                            <a href="/categories/{{ .Name | urlize }}" class="mx-2">{{ .Name }}</a>
+                            <a href="/categories/{{ .Name | urlize }}" class="mx-2">{{ .Page.Title | title  }}</a>
                             <span class="text-muted small font-weight-light"> {{ .Count }} posts</span>
                         </li>
                         {{ end }}
