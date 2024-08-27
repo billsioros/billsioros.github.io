@@ -80,7 +80,7 @@ df.head()
 
 Based on our exploratory data analysis (EDA), we have already drawn the following conclusions:
 
-- We will [OneHotEncoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html) to encode our categorical features.
+- We will employ [OneHotEncoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html) to encode our categorical features.
 - Numerical features are not normally distributed and contain outliers. To address this we will employ [RobustScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.RobustScaler.html).
 - We will only consider models that are robust to multicollinearity. Our candidate models will be [`SVC`](https://scikit-learn.org/stable/modules/svm.html), [`RandomForestClassifier`](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html) and [`XGBoost`](https://xgboost.readthedocs.io/en/stable/).
 
@@ -229,11 +229,11 @@ for model_choice in tqdm(ModelChoice):
 pd.DataFrame(results).T
 ```
 
-| Model         | Accuracy         | Precision        | Recall           | F1               |
-| ------------- | ---------------- | ---------------- | ---------------- | ---------------- |
-| SVC           | 86.918 +/- 1.480 | 85.830 +/- 2.698 | 91.269 +/- 1.139 | 88.427 +/- 1.053 |
-| Random Forest | 86.916 +/- 2.117 | 85.661 +/- 3.010 | 91.519 +/- 1.240 | 88.460 +/- 1.653 |
-| XGB           | 86.106 +/- 2.732 | 85.889 +/- 2.574 | 89.287 +/- 2.969 | 87.536 +/- 2.432 |
+| Model         | Accuracy                 | Precision                | Recall                   | F1                       |
+| ------------- | ------------------------ | ------------------------ | ------------------------ | ------------------------ |
+| SVC           | \\( 86.918 \pm 1.480 \\) | \\( 85.830 \pm 2.698 \\) | \\( 91.269 \pm 1.139 \\) | \\( 88.427 \pm 1.053 \\) |
+| Random Forest | \\( 86.916 \pm 2.117 \\) | \\( 85.661 \pm 3.010 \\) | \\( 91.519 \pm 1.240 \\) | \\( 88.460 \pm 1.653 \\) |
+| XGB           | \\( 86.106 \pm 2.732 \\) | \\( 85.889 \pm 2.574 \\) | \\( 89.287 \pm 2.969 \\) | \\( 87.536 \pm 2.432 \\) |
 
 In predicting heart disease, where missing a case can have serious consequences, we prioritize recall to ensure we catch as many cases as possible. Since `XGBoost` has the lowest recall, we’ve decided not to pursue it further. On the other hand, `RandomForestClassifier` offers the highest recall and has accuracy and F1 scores comparable to those of `SVC`.
 
