@@ -247,8 +247,8 @@ params:
         school:
           name: "National Technical University of Athens"
           url: "https://www.ntua.gr/en"
-        date: "Sep 2022 - Present"
-        GPA: "9 out of 10"
+        date: "Sep 2022 - Sep 2024"
+        GPA: "9.5 out of 10"
         content: |-
           I'm currently working on my thesis wherein we explore harnessing cross attention control for instruction-based auto-regressive audio editing.
 
