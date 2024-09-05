@@ -12,6 +12,7 @@ tags:
   - Data Science
   - Artificial Intelligence
 previousPost: https://billsioros.github.io/posts/exploratory-data-analysis/
+nextPost: https://billsioros.github.io/posts/heart-disease-rest-api/
 image: /images/posts/heart-disease-prediction/index.png
 thumbnail: /images/posts/heart-disease-prediction/index.thumbnail.png
 description: "Foresee the Future of Your Heart Health!"
