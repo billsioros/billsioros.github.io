@@ -215,34 +215,21 @@ async def predict(
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Unexpected error.") from e
 ```
 
-Alright, so here’s the deal: To get our FastAPI app running in Google Colab, we use a few clever tricks since Colab isn’t set up for local servers.
+Alright, so here’s the deal: Running our FastAPI app in Google Colab is not as straight forward as we'd like since Colab isn’t set up for local servers. So we use a neat trick: [`nest_asyncio`](https://github.com/erdewit/nest_asyncio).
 
-- **CORS Middleware**: This allows our API to accept requests from any origin, so we don’t run into any cross-origin hiccups.
-- **Ngrok**: Think of this as a magic tunnel that lets the world see our local server by giving it a public URL. Pretty cool, right?
-- **Nest Asyncio**: This helps our event loop run smoothly in the Colab environment.
-- **Uvicorn**: This is our server that runs the FastAPI app on port 8000.
+> *"By design asyncio does not allow its event loop to be nested. This presents a practical problem: When in an environment where the event loop is already running it's impossible to run tasks and wait for the result. Trying to do so will give the error `RuntimeError: This event loop is already running.`"*
+>
+> *"This module patches asyncio to allow nested use of asyncio.run and loop.run_until_complete."*
 
 ```python
-from fastapi.middleware.cors import CORSMiddleware
 import nest_asyncio
-from pyngrok import ngrok
 import uvicorn
 
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-
-ngrok_tunnel = ngrok.connect(8000)
-print("Public URL:", ngrok_tunnel.public_url)
 nest_asyncio.apply()
 uvicorn.run(app, port=8000)
 ```
 
-We’re up and running! For running FastAPI locally on your own machine, you just need this (_No Ngrok or Colab magic required—just simple and direct!_):
+We’re up and running! For running FastAPI locally on your own machine, you just need this (_No Colab magic required—just simple and direct!_):
 
 ```python
 import uvicorn
@@ -251,6 +238,4 @@ if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)
 ```
 
-We’ve dived into the exciting world of FastAPI, set up a REST API, and even integrated it with a machine learning model to build a heart failure detection system.
-
-Stay tuned for our upcoming blog posts, where we’ll explore deploying applications with Docker and Docker Compose, handling data persistence with databases, and much more :rocket: !
+We’ve dived into the exciting world of FastAPI, set up a REST API, and even integrated it with a machine learning model to build a heart failure detection system. Stay tuned for our upcoming blog posts, where we’ll explore deploying applications with Docker and Docker Compose, handling data persistence with databases, and much more :rocket: !
