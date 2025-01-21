@@ -1,6 +1,6 @@
 baseURL: "https://billsioros.github.io"
 languageCode: "en-us"
-title: "Vassilis Sioros | Software / Machine Learning Engineer"
+title: "Vassilis Sioros"
 theme: hugo-profile
 
 outputs:
@@ -71,7 +71,7 @@ Menus:
 
 params:
   title: "Vassilis Sioros"
-  description: Software / Machine Learning Engineer - AI / ML MSc Candidate
+  description: Principal ML Engineer - PhD Candidate
   # staticPath: ""  # The path to serve the static files from
   favicon: "/fav.png"
 
@@ -143,7 +143,7 @@ params:
     intro: "Hi, my name is"
     title: "Vassilis Sioros."
     subtitle: "Software / Machine Learning Engineer"
-    content: "I am currently pursuing a MSc in [Data Science and Machine Learning](https://dsml.ece.ntua.gr/) at [National Technical University of Athens](https://www.ntua.gr/en), with a research focus on Natural Language Processing and Generative AI. Recently, I embarked on a new chapter in my career, serving as a CTO at [Group4Life](https://www.group4life.com) and managing people for the first time. I have previously worked as a Software Engineer at [Kaizen Gaming](https://kaizengaming.com) based in Athens, Greece. I have a background in software engineering, with extensive experience in Python and .NET technologies."
+    content: "I am a PhD candidate at [NKUA](https://en.uoa.gr/), collaborating with [NCSR Demokritos](https://insane.iit.demokritos.gr/), with research interests in Neurosymbolic and Generative AI. I hold an MSc in Data Science and Machine Learning from [NTUA](https://dsml.ece.ntua.gr/) and a BSc in Informatics and Telecommunications from [NKUA](https://www.di.uoa.gr/). Currently, I work as a Principal ML engineer at [ahedd - Digital Innovation Hub](https://ahedd.demokritos.gr/) and recently stepped into a CTO role, leading teams for the first time. I have previously worked as a software engineer in the industry."
     image: /images/me.jpg
     bottomImage:
       enable: false
@@ -192,6 +192,23 @@ params:
     enable: true
     # title: "Custom Name"
     items:
+      - job: "Machine Learning Engineer"
+        company: "ahedd - Digital Innovation Hub"
+        companyUrl: "https://ahedd.demokritos.gr/"
+        date: "Oct 2024 - Now"
+        content: |
+          Principal Machine Learning Engineer:
+
+            - Designing AI systems
+            - Leading research
+            - Mentoring teams
+            - Aligning ML solutions with business goals
+
+          Machine Learning Engineer
+
+            - Creating and implementing AI solutions to address practical challenges
+            - Focusing on optimizing performance
+            - Delivering scalable results
       - job: "Chief Technology Officer"
         company: "Group4Life"
         companyUrl: "https://www.group4life.com"
@@ -243,6 +260,17 @@ params:
     # title: "Custom Name"
     index: false
     items:
+      - title: "PhD in Knowledge Guided & Rule Validated Generative AI"
+        school:
+          name: "National and Kapodistrian University of Athens"
+          url: "https://en.uoa.gr"
+        date: "Oct 2024 - Now"
+        content: |-
+          Generative AI models excel in tasks like image generation and language processing but often produce errors like hallucinations and artifacts due to over-reliance on patterns.
+
+          My research combines neural networks with symbolic AI to develop knowledge-guided, rule-validated systems.
+
+          By enhancing reasoning with methods like graph neural networks and automatic validation, it aims to create reliable outputs, with applications in fields like stable material generation guided by physical laws.
       - title: "MSc in Data Science and Machine Learning"
         school:
           name: "National Technical University of Athens"
